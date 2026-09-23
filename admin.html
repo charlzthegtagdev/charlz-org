@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gorilla Tag APK Dev Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#0b0f12',
+                        cardBg: '#151b22',
+                        accentGreen: '#00ff66',
+                        accentCyan: '#00f0ff',
+                        darkBorder: '#21262d'
+                    },
+                    boxShadow: {
+                        'neon': '0 0 20px rgba(0, 255, 102, 0.3)',
+                        'neon-cyan': '0 0 20px rgba(0, 240, 255, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            background-color: #0b0f12;
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        .floating-gorilla {
+            animation: floatAnim 4s ease-in-out infinite;
+        }
+
+        @keyframes floatAnim {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-15px) rotate(2deg); }
+        }
+
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 102, 0.6), 0 0 20px rgba(0, 255, 102, 0.3);
+        }
+
+        .glow-text-cyan {
+            text-shadow: 0 0 10px rgba(0, 240, 255, 0.6), 0 0 20px rgba(0, 240, 255, 0.3);
+        }
+
+        /* Card 3D tilt styling via JS or CSS hover */
+        .tilt-card {
+            transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+        }
+        .tilt-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 10px 30px rgba(0, 255, 102, 0.2);
+            border-color: #00ff66;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0b0f12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #21262d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00ff66;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-100 min-h-screen flex flex-col justify-between selection:bg-accentGreen selection:text-black">
+
+    <!-- Background Cyber Grid Effect -->
+    <div class="fixed inset-0 pointer-events-none opacity-10 bg-[linear-gradient(to_right,#1f2937_1px,transparent_1px),linear-gradient(to_bottom,#1f2937_1px,transparent_1px)] bg-[size:4rem_4rem] z-0"></div>
+
+    <!-- Top Navigation -->
+    <header class="w-full border-b border-darkBorder bg-darkBg/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-6 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-accentGreen to-accentCyan flex items-center justify-center text-black font-bold text-xl shadow-neon">
+                    🦍
+                </div>
+                <span class="font-bold text-xl tracking-wider text-accentGreen">MONKE.APK</span>
+            </div>
+            <nav class="hidden md:flex space-x-8 text-sm font-semibold text-gray-400">
+                <a href="#about" class="hover:text-accentGreen transition-colors">About</a>
+                <a href="#projects" class="hover:text-accentGreen transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-accentGreen transition-colors">Tech Stack</a>
+                <a href="#contact" class="hover:text-accentGreen transition-colors">Contact</a>
+            </nav>
+            <a href="#contact" class="hidden sm:inline-block px-5 py-2.5 rounded-lg bg-accentGreen text-black font-bold text-sm tracking-wide hover:bg-emerald-400 transition-all shadow-neon">
+                Let's Collab
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow max-w-6xl mx-auto px-6 py-12 z-10 w-full space-y-24">
+
+        <!-- Hero Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center pt-8">
+            <div class="space-y-6">
+                <div class="inline-flex items-center space-x-2 px-3 py-1.5 rounded-full bg-cardBg border border-darkBorder text-accentGreen text-xs font-semibold tracking-wider uppercase shadow-sm">
+                    <span class="w-2 h-2 rounded-full bg-accentGreen animate-ping"></span>
+                    <span>Available for Fan-Game APK Projects</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-none">
+                    Hey, I'm <span class="text-accentGreen glow-text">GorillaDev</span>
+                </h1>
+
+                <p class="text-xl text-gray-400 h-10 font-mono">
+                    I build <span id="typing-text" class="text-accentCyan glow-text-cyan border-r-2 border-accentCyan pr-1"></span>
+                </p>
+
+                <p class="text-gray-400 leading-relaxed max-w-lg">
+                    Passionate Gorilla Tag fan-game creator and APK developer. Specialized in custom physics tweaks, smooth multiplayer netcode integration, custom cosmetics mods, and optimized mobile builds.
+                </p>
+
+                <div class="flex flex-wrap gap-4 pt-2">
+                    <a href="#projects" class="px-7 py-3.5 rounded-xl bg-accentGreen text-black font-bold hover:bg-emerald-400 transition-all shadow-neon flex items-center space-x-2">
+                        <span>Explore Projects</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="px-7 py-3.5 rounded-xl bg-cardBg border border-darkBorder hover:border-accentCyan font-bold transition-all text-white flex items-center space-x-2">
+                        <i class="fa-brands fa-discord"></i>
+                        <span>Discord Community</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Floating Gorilla Mascot / Card Graphic -->
+            <div class="flex justify-center items-center">
+                <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-b from-cardBg to-darkBg border border-darkBorder shadow-2xl flex flex-col items-center justify-center p-6 text-center group tilt-card">
+                    <div class="absolute -top-3 -right-3 px-3 py-1 bg-accentGreen text-black font-bold text-xs rounded-lg shadow-neon uppercase">
+                        Active Dev
+                    </div>
+                    <!-- Gorilla Mascot Icon -->
+                    <div class="floating-gorilla text-7xl sm:text-8xl mb-4 select-none filter drop-shadow-[0_0_15px_rgba(0,255,102,0.4)]">
+                        🦍
+                    </div>
+                    <h3 class="text-xl font-bold text-white tracking-wide">Monke Engine v2.4</h3>
+                    <p class="text-xs text-gray-400 mt-1">Custom Gorilla Tag APK Wrapper & Physics Suite</p>
+                    <div class="w-full bg-darkBg rounded-full h-2 mt-6 overflow-hidden border border-darkBorder">
+                        <div class="bg-gradient-to-r from-accentGreen to-accentCyan h-full w-4/5 animate-pulse"></div>
+                    </div>
+                    <div class="flex justify-between w-full text-xs text-gray-500 mt-2 font-mono">
+                        <span>BUILD: 99.4%</span>
+                        <span class="text-accentGreen">STABLE</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <section class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder text-center tilt-card">
+                <div class="text-3xl sm:text-4xl font-extrabold text-accentGreen glow-text font-mono">15+</div>
+                <p class="text-sm text-gray-400 mt-1">Custom APKs Released</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder text-center tilt-card">
+                <div class="text-3xl sm:text-4xl font-extrabold text-accentCyan glow-text-cyan font-mono">50K+</div>
+                <p class="text-sm text-gray-400 mt-1">Total Downloads</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder text-center tilt-card">
+                <div class="text-3xl sm:text-4xl font-extrabold text-accentGreen glow-text font-mono">3 Yrs</div>
+                <p class="text-sm text-gray-400 mt-1">Unity & VR Dev</p>
+            </div>
+            <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder text-center tilt-card">
+                <div class="text-3xl sm:text-4xl font-extrabold text-accentCyan glow-text-cyan font-mono">99%</div>
+                <p class="text-sm text-gray-400 mt-1">Positive Community Rating</p>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="space-y-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div>
+                    <span class="text-accentGreen text-xs font-bold tracking-widest uppercase font-mono">Portfolio</span>
+                    <h2 class="text-3xl font-extrabold mt-1">Featured Fan-Games & APKs</h2>
+                </div>
+                <p class="text-gray-400 text-sm max-w-md">
+                    Check out some of the most popular gorilla fan-games and APK projects I've built and optimized for Meta Quest and mobile standalone headsets.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- Project 1 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder flex flex-col justify-between tilt-card">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-accentGreen/10 border border-accentGreen/30 flex items-center justify-center text-accentGreen text-xl mb-4 shadow-sm">
+                            🌴
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Gorilla Jungle: Revival</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            A high-performance custom fan-game featuring custom maps, custom cosmetics shop, and smooth tree-climbing mechanics with optimized physics.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-darkBorder">
+                        <span class="text-xs font-mono text-accentGreen bg-accentGreen/10 px-2.5 py-1 rounded-md">v1.2.0 APK</span>
+                        <a href="#contact" class="text-sm font-bold text-gray-300 hover:text-accentGreen flex items-center space-x-1 transition-colors">
+                            <span>Get APK</span>
+                            <i class="fa-solid fa-download text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder flex flex-col justify-between tilt-card">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-accentCyan/10 border border-accentCyan/30 flex items-center justify-center text-accentCyan text-xl mb-4 shadow-sm">
+                            ❄️
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">Frosty Monke Mod Menu</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            An open-source mod menu base for Gorilla Tag developers featuring custom UI overlays, teleport tools, and color customizer scripts.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-darkBorder">
+                        <span class="text-xs font-mono text-accentCyan bg-accentCyan/10 px-2.5 py-1 rounded-md">Open Source</span>
+                        <a href="#contact" class="text-sm font-bold text-gray-300 hover:text-accentCyan flex items-center space-x-1 transition-colors">
+                            <span>GitHub</span>
+                            <i class="fa-brands fa-github text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="p-6 rounded-2xl bg-cardBg border border-darkBorder flex flex-col justify-between tilt-card">
+                    <div>
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl mb-4 shadow-sm">
+                            ⚡
+                        </div>
+                        <h3 class="text-xl font-bold mb-2 text-white">CyberTag Arena</h3>
+                        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+                            A futuristic cyberpunk overhaul fan-game with neon lighting, custom particle trails, and low-latency photon multiplayer integration.
+                        </p>
+                    </div>
+                    <div class="flex items-center justify-between pt-4 border-t border-darkBorder">
+                        <span class="text-xs font-mono text-purple-400 bg-purple-500/10 px-2.5 py-1 rounded-md">Beta Release</span>
+                        <a href="#contact" class="text-sm font-bold text-gray-300 hover:text-purple-400 flex items-center space-x-1 transition-colors">
+                            <span>Preview</span>
+                            <i class="fa-solid fa-eye text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tech Stack / Skills Section -->
+        <section id="skills" class="space-y-8">
+            <div>
+                <span class="text-accentCyan text-xs font-bold tracking-widest uppercase font-mono">Expertise</span>
+                <h2 class="text-3xl font-extrabold mt-1">Tech Stack & Developer Tools</h2>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-brands fa-unity text-3xl text-gray-200"></i>
+                    <span class="font-bold text-sm">Unity 2022</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-brands fa-c-sharp text-3xl text-purple-400"></i>
+                    <span class="font-bold text-sm">C# Scripting</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-solid fa-vr-cardboard text-3xl text-accentGreen"></i>
+                    <span class="font-bold text-sm">XR Toolkit</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-solid fa-network-wired text-3xl text-accentCyan"></i>
+                    <span class="font-bold text-sm">Photon PUN</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-solid fa-mobile-screen text-3xl text-amber-400"></i>
+                    <span class="font-bold text-sm">APK Build Tools</span>
+                </div>
+                <div class="p-5 rounded-2xl bg-cardBg border border-darkBorder text-center flex flex-col items-center justify-center space-y-3 tilt-card">
+                    <i class="fa-brands fa-git-alt text-3xl text-red-400"></i>
+                    <span class="font-bold text-sm">Git & GitHub</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact & Community Callout Section -->
+        <section id="contact" class="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-cardBg via-[#10171d] to-cardBg border border-darkBorder relative overflow-hidden shadow-2xl">
+            <div class="absolute -right-20 -bottom-20 w-64 h-64 rounded-full bg-accentGreen/10 blur-3xl pointer-events-none"></div>
+            <div class="absolute -left-20 -top-20 w-64 h-64 rounded-full bg-accentCyan/10 blur-3xl pointer-events-none"></div>
+
+            <div class="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-4">
+                    <span class="text-accentGreen text-xs font-bold tracking-widest uppercase font-mono">Let's Connect</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Join the APK Community!</h2>
+                    <p class="text-gray-400 leading-relaxed text-sm">
+                        Want to test my latest builds, collaborate on a Gorilla Tag fan-game, or need advice on optimizing your APK package? Hit me up on Discord or drop a message!
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-end">
+                    <a href="https://discord.com" target="_blank" class="px-6 py-4 rounded-xl bg-[#5865F2] hover:bg-[#4752C4] text-white font-bold flex items-center justify-center space-x-3 transition-all shadow-lg">
+                        <i class="fa-brands fa-discord text-xl"></i>
+                        <span>Discord Server</span>
+                    </a>
+                    <a href="mailto:developer@gorillatagapk.dev" class="px-6 py-4 rounded-xl bg-cardBg border border-darkBorder hover:border-accentGreen text-white font-bold flex items-center justify-center space-x-3 transition-all">
+                        <i class="fa-solid fa-envelope text-xl text-accentGreen"></i>
+                        <span>Send Email</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full border-t border-darkBorder py-8 bg-darkBg text-center text-sm text-gray-500 z-10">
+        <div class="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <div class="flex items-center space-x-2">
+                <span class="text-accentGreen font-bold">GORILLADEV.APK</span>
+                <span>&copy; 2026. All rights reserved.</span>
+            </div>
+            <div class="flex space-x-6 text-gray-400">
+                <a href="#" class="hover:text-accentGreen transition-colors"><i class="fa-brands fa-github text-lg"></i></a>
+                <a href="#" class="hover:text-accentGreen transition-colors"><i class="fa-brands fa-discord text-lg"></i></a>
+                <a href="#" class="hover:text-accentGreen transition-colors"><i class="fa-brands fa-youtube text-lg"></i></a>
+                <a href="#" class="hover:text-accentGreen transition-colors"><i class="fa-brands fa-twitter text-lg"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Typing Effect for Hero Section
+        const roles = [
+            "Gorilla Tag Fan-Games 🌴",
+            "Custom APK Packages 📦",
+            "Multiplayer VR Worlds 🎮",
+            "Optimized Mod Menus ⚡"
+        ];
+        
+        let roleIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        const typingSpeed = 100;
+        const deletingSpeed = 50;
+        const pauseTime = 2000;
+        const typingElement = document.getElementById("typing-text");
+
+        function typeEffect() {
+            const currentRole = roles[roleIndex];
+            
+            if (isDeleting) {
+                typingElement.textContent = currentRole.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingElement.textContent = currentRole.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentRole.length) {
+                isDeleting = true;
+                setTimeout(typeEffect, pauseTime);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(typeEffect, 500);
+            } else {
+                setTimeout(typeEffect, isDeleting ? deletingSpeed : typingSpeed);
+            }
+        }
+
+        // Start typing effect on load
+        window.onload = function() {
+            typeEffect();
+        };
+    </script>
+</body>
+</html>
