@@ -379,7 +379,7 @@
                     <button type="submit" class="w-full py-3.5 rounded-xl bg-accentRed text-white font-bold text-sm hover:bg-red-600 transition-all shadow-neon-red">
                         Log In To Control Panel
                     </button>
-                    <p class="text-[10px] text-gray-500 text-center mono-font">Default: Username: <span class="text-accentRed">admin</span> | Password: <span class="text-accentRed">admin123</span></p>
+                    <p class="text-[10px] text-gray-500 text-center mono-font">Charlz: <span class="text-accentRed"></span> | <span class="text-accentRed">Admin Panel</span></p>
                 </form>
             </div>
 
@@ -465,7 +465,7 @@
             const pass = document.getElementById('adminPass').value;
             const errorMsg = document.getElementById('loginError');
 
-            if (user === 'admin' && pass === 'admin123') {
+            if (user === 'admin' && pass === 'Bauer4785!.-') {
                 sessionStorage.setItem('charlz_admin_logged_in', 'true');
                 errorMsg.classList.add('hidden');
                 checkLoginState();
