@@ -1,67 +1,144 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Charlz Maintenance</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body {
-            background-color: #030704;
-            color: #e2e8f0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            overflow: hidden;
-        }
-        .tech-grid {
-            background-image: linear-gradient(to right, rgba(16, 185, 129, 0.05) 1px, transparent 1px),
-                              linear-gradient(to bottom, rgba(16, 185, 129, 0.05) 1px, transparent 1px);
-            background-size: 32px 32px;
-        }
-        .scanline {
-            width: 100%;
-            height: 100px;
-            position: absolute;
-            background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(16, 185, 129, 0.08) 50%, rgba(255,255,255,0));
-            pointer-events: none;
-            animation: scan 8s linear infinite;
-        }
-        @keyframes scan {
-            0% { transform: translateY(-100px); }
-            100% { transform: translateY(105vh); }
-        }
-    </style>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Charlz — Gorilla Tag Copy Developer</title>
+<meta name="description" content="Charlz — Gorilla Tag Copy developer behind games."/>
+<meta name="theme-color" content="#05060a"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet"/>
+<style>:root{--bg:#05060a;--pl:rgba(255,255,255,.035);--pl2:rgba(255,255,255,.055);--ln:rgba(255,255,255,.09);--lns:rgba(255,255,255,.16);--tx:#eef1f8;--mt:#98a0b8;--dm:#6b7288;--c1:#38e1ff;--c2:#8b5cf6;--c3:#ff5fa2;--rd:18px;--mw:1120px}*,::before,::after{box-sizing:border-box}html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}body{margin:0;background:var(--bg);color:var(--tx);font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:16px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}img{max-width:100%;display:block}a{color:inherit;text-decoration:none}h1,h2,h3,h4{font-family:'Space Grotesk','Inter',sans-serif;line-height:1.15;margin:0;letter-spacing:-.02em}p{margin:0}::selection{background:rgba(139,92,246,.4);color:#fff}.bgi{position:fixed;inset:0;z-index:-2;overflow:hidden;pointer-events:none}.bl{position:absolute;border-radius:50%;filter:blur(110px);opacity:.5;animation:fl 22s ease-in-out infinite}.bl.a{width:520px;height:520px;background:radial-gradient(circle at 30% 30%,#38e1ff,transparent 70%);top:-160px;left:-120px}.bl.b{width:600px;height:600px;background:radial-gradient(circle at 60% 40%,#8b5cf6,transparent 70%);top:22%;right:-220px;animation-delay:-7s}.bl.c{width:480px;height:480px;background:radial-gradient(circle at 50% 50%,#ff5fa2,transparent 70%);bottom:-180px;left:28%;animation-delay:-13s;opacity:.32}@keyframes fl{0%,100%{transform:translate3d(0,0,0) scale(1)}33%{transform:translate3d(50px,-40px,0) scale(1.08)}66%{transform:translate3d(-40px,30px,0) scale(.94)}}.go{position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:linear-gradient(rgba(255,255,255,.028) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.028) 1px,transparent 1px);background-size:64px 64px;mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 20%,transparent 78%);-webkit-mask-image:radial-gradient(ellipse 90% 60% at 50% 0%,#000 20%,transparent 78%)}.wr{width:100%;max-width:var(--mw);margin:0 auto;padding:0 24px}section{padding:96px 0;position:relative}header.nv{position:sticky;top:0;z-index:100;backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);background:rgba(5,6,10,.62);border-bottom:1px solid transparent;transition:border-color .3s,background .3s}header.nv.sc{border-bottom-color:var(--ln);background:rgba(5,6,10,.85)}.ni{display:flex;align-items:center;justify-content:space-between;height:70px}.br{display:flex;align-items:center;gap:11px;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.06rem;letter-spacing:-.01em}.bm{width:34px;height:34px;border-radius:10px;display:grid;place-items:center;background:linear-gradient(135deg,var(--c1),var(--c2) 55%,var(--c3));color:#05060a;font-weight:700;font-size:.95rem;box-shadow:0 0 0 1px rgba(255,255,255,.12),0 8px 26px -8px rgba(139,92,246,.85)}.br small{display:block;font-family:'Inter',sans-serif;font-weight:400;font-size:.66rem;color:var(--dm);letter-spacing:.14em;text-transform:uppercase;margin-top:-2px}nav.lk{display:flex;align-items:center;gap:4px}nav.lk a{padding:8px 14px;border-radius:9px;font-size:.9rem;font-weight:500;color:var(--mt);transition:color .2s,background .2s}nav.lk a:hover{color:var(--tx);background:var(--pl2)}nav.lk a.ac{color:var(--tx)}nav.lk a.ac::after{content:'';display:block;height:2px;width:16px;margin:4px auto -6px;border-radius:2px;background:linear-gradient(90deg,var(--c1),var(--c2))}.nc{margin-left:8px;padding:9px 18px!important;border-radius:10px;font-weight:600!important;color:#05060a!important;background:linear-gradient(135deg,var(--c1),var(--c2));box-shadow:0 8px 24px -10px rgba(56,225,255,.9)}.nc:hover{filter:brightness(1.1)}.bg2{display:none;width:42px;height:42px;border-radius:11px;border:1px solid var(--ln);background:var(--pl);cursor:pointer;padding:0;place-items:center}.bg2 span{display:block;width:17px;height:1.8px;background:var(--tx);border-radius:2px;transition:.3s}.bg2 span+span{margin-top:4px}.bg2.op span:nth-child(1){transform:translateY(5.8px) rotate(45deg)}.bg2.op span:nth-child(2){opacity:0}.bg2.op span:nth-child(3){transform:translateY(-5.8px) rotate(-45deg)}.hr{padding:110px 0 90px;text-align:center}.pl{display:inline-flex;align-items:center;gap:9px;padding:7px 16px 7px 12px;border-radius:999px;border:1px solid var(--lns);background:var(--pl);font-size:.82rem;color:var(--mt);font-weight:500;backdrop-filter:blur(8px)}.dt{width:7px;height:7px;border-radius:50%;background:#34d399;box-shadow:0 0 0 0 rgba(52,211,153,.7);animation:pu 2.2s infinite}@keyframes pu{0%{box-shadow:0 0 0 0 rgba(52,211,153,.6)}70%{box-shadow:0 0 0 9px rgba(52,211,153,0)}100%{box-shadow:0 0 0 0 rgba(52,211,153,0)}}.hr h1{margin:26px 0 0;font-size:clamp(3rem,10vw,6.4rem);font-weight:700;letter-spacing:-.045em;background:linear-gradient(180deg,#fff 18%,#a9b2cc 92%);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;line-height:.98}.hr .sb{margin:22px auto 0;max-width:660px;font-size:clamp(1rem,2.2vw,1.16rem);color:var(--mt)}.hr .sb b{color:var(--tx);font-weight:600}.gt{background:linear-gradient(100deg,var(--c1),var(--c2) 48%,var(--c3));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.ha{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:36px}.bt{display:inline-flex;align-items:center;gap:9px;padding:13px 24px;border-radius:12px;font-weight:600;font-size:.94rem;border:1px solid transparent;cursor:pointer;transition:transform .2s,box-shadow .25s,background .25s,border-color .25s}.bt:active{transform:translateY(1px)}.bp{background:linear-gradient(135deg,var(--c1),var(--c2));color:#05060a;box-shadow:0 14px 34px -14px rgba(56,225,255,.95)}.bp:hover{transform:translateY(-2px);box-shadow:0 20px 42px -14px rgba(139,92,246,.95)}.bgh{border-color:var(--lns);background:var(--pl);color:var(--tx)}.bgh:hover{background:var(--pl2);border-color:rgba(255,255,255,.3);transform:translateY(-2px)}.st{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;max-width:660px;margin:64px auto 0}.sc{padding:22px 14px;border-radius:var(--rd);border:1px solid var(--ln);background:var(--pl);backdrop-filter:blur(10px)}.nm{font-family:'Space Grotesk',sans-serif;font-size:clamp(1.6rem,4vw,2.1rem);font-weight:700;background:linear-gradient(135deg,var(--c1),var(--c2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}.lb{font-size:.76rem;color:var(--dm);text-transform:uppercase;letter-spacing:.12em;margin-top:4px}.eb{display:inline-block;font-size:.76rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--c1);margin-bottom:14px}.sT{font-size:clamp(1.75rem,4.4vw,2.6rem);font-weight:700}.sL{color:var(--mt);max-width:640px;margin-top:16px;font-size:1.02rem}.sH{margin-bottom:48px}.aG{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:start}.aB p+p{margin-top:18px}.aB p{color:var(--mt);font-size:1.02rem}.aB strong{color:var(--tx);font-weight:600}.cd{border-radius:var(--rd);border:1px solid var(--ln);background:linear-gradient(160deg,var(--pl2),var(--pl));padding:26px;backdrop-filter:blur(10px)}.fL{list-style:none;margin:0;padding:0;display:grid;gap:16px}.fL li{display:flex;gap:13px;align-items:flex-start;font-size:.93rem}.ic{flex:0 0 30px;height:30px;border-radius:9px;display:grid;place-items:center;background:rgba(56,225,255,.1);border:1px solid rgba(56,225,255,.22);font-size:.85rem}.kk{color:var(--dm);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;display:block}.vv{color:var(--tx);font-weight:500}.skG{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}.sk{border-radius:var(--rd);border:1px solid var(--ln);background:var(--pl);padding:24px;transition:transform .3s,border-color .3s,background .3s;position:relative;overflow:hidden}.sk::after{content:'';position:absolute;inset:0;border-radius:inherit;opacity:0;transition:opacity .35s;background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(139,92,246,.14),transparent 65%);pointer-events:none}.sk:hover{transform:translateY(-4px);border-color:var(--lns);background:var(--pl2)}.sk:hover::after{opacity:1}.io{width:40px;height:40px;border-radius:12px;display:grid;place-items:center;font-size:1.15rem;background:linear-gradient(135deg,rgba(56,225,255,.16),rgba(139,92,246,.16));border:1px solid var(--lns);margin-bottom:16px}.sk h3{font-size:1.02rem;font-weight:600;margin-bottom:8px}.sk p{color:var(--mt);font-size:.91rem}.fq{display:grid;gap:12px;max-width:840px}details.qq{border:1px solid var(--ln);border-radius:14px;background:var(--pl);overflow:hidden;transition:border-color .25s,background .25s}details.qq[open]{border-color:var(--lns);background:var(--pl2)}details.qq summary{list-style:none;cursor:pointer;padding:19px 22px;display:flex;align-items:center;justify-content:space-between;gap:16px;font-weight:600;font-size:.98rem}details.qq summary::-webkit-details-marker{display:none}details.qq summary::after{content:'+';font-size:1.35rem;font-weight:400;color:var(--c1);transition:transform .3s;line-height:1;flex:0 0 auto}details.qq[open] summary::after{transform:rotate(45deg)}details.qq .aa{padding:0 22px 20px;color:var(--mt);font-size:.95rem}.ct{border-radius:26px;border:1px solid var(--lns);background:radial-gradient(700px circle at 12% 0%,rgba(56,225,255,.1),transparent 55%),radial-gradient(700px circle at 88% 100%,rgba(139,92,246,.14),transparent 55%),var(--pl);padding:60px 34px;text-align:center}.ct h2{font-size:clamp(1.7rem,4.6vw,2.5rem)}.ct p{color:var(--mt);max-width:520px;margin:16px auto 0}.ct .ha{margin-top:30px}footer{border-top:1px solid var(--ln);padding:34px 0;margin-top:20px}.ft{display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}.ft p{font-size:.85rem;color:var(--dm)}.fL2{display:flex;gap:20px;font-size:.85rem}.fL2 a{color:var(--mt);transition:color .2s}.fL2 a:hover{color:var(--c1)}.rv{opacity:0;transform:translateY(26px);transition:opacity .75s cubic-bezier(.2,.7,.3,1),transform .75s cubic-bezier(.2,.7,.3,1)}.rv.on{opacity:1;transform:none}@media(max-width:900px){.aG{grid-template-columns:1fr;gap:30px}}@media(max-width:760px){section{padding:70px 0}.hr{padding:80px 0 64px}.bg2{display:grid}nav.lk{position:absolute;top:70px;left:0;right:0;flex-direction:column;align-items:stretch;gap:2px;background:rgba(6,7,12,.97);backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);padding:14px 20px 22px;transform:translateY(-12px);opacity:0;pointer-events:none;transition:.28s}nav.lk.op{transform:none;opacity:1;pointer-events:auto}nav.lk a{padding:13px 14px;font-size:.98rem}nav.lk a.ac::after{display:none}.nc{margin-left:0;text-align:center;margin-top:8px}.st{grid-template-columns:1fr;max-width:340px}.ct{padding:44px 22px}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01ms!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}</style>
 </head>
-<body class="tech-grid min-h-screen flex items-center justify-center p-6 relative">
-    <div class="scanline"></div>
-
-    <!-- Top-Left Developer Tag -->
-    <div class="absolute top-6 left-6 md:top-8 md:left-8 flex items-center space-x-2 z-10">
-        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></div>
-        <span class="text-xs md:text-sm font-mono text-emerald-400 tracking-wider">Charlz GTAG Copy developer</span>
-    </div>
-
-    <div class="max-w-xl w-full bg-[#071109]/90 border border-emerald-500/30 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-md relative overflow-hidden">
-        <!-- Glow effect -->
-        <div class="absolute -top-24 -right-24 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none"></div>
-
-        <!-- Status Header -->
-        <div class="flex items-center justify-between mb-8 pb-4 border-b border-emerald-500/20">
-            <div class="flex items-center space-x-3">
-                <span class="relative flex h-3 w-3">
-                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                  <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
-                </span>
-                <span class="text-xs uppercase tracking-widest text-emerald-400 font-semibold">Security Overhaul Active</span>
-            </div>
-            <div class="text-xs text-emerald-600 font-mono">STATUS: LOCKED</div>
-        </div>
-
-        <!-- Core Statement -->
-        <div class="my-6">
-            <p class="text-xl md:text-2xl font-medium text-emerald-100 leading-relaxed tracking-wide">
-                Website is going under changes, we are tightening our security, so our passwords dont get pulled (like the last time)
-            </p>
-        </div>
-    </div>
+<body>
+<div class="bgi"><div class="bl a"></div><div class="bl b"></div><div class="bl c"></div></div>
+<div class="go"></div>
+<header class="nv" id="nv"><div class="wr ni"><a class="br" href="#top"><span class="bm">C</span><span>Charlz<small>charlz.org</small></span></a><nav class="lk" id="lk"><a href="#about">About</a><a href="#skills">Skills</a><a href="#faq">FAQ</a><a href="#contact" class="nc">Get in touch</a></nav><button class="bg2" id="bg2" aria-label="Toggle menu" aria-expanded="false"><span></span><span></span><span></span></button></div></header>
+<main id="top">
+<section class="hr"><div class="wr"><span class="pl"><span class="dt"></span> Available for collaboration</span><h1>Charlz</h1><p class="sb"><b class="gt">Gorilla Tag Copy developer</b> behind games. Over a year developing Gorilla Tag–style games with the APK method — movement, systems and the feel of them.</p><div class="ha"><a href="#about" class="bt bp">Learn more →</a><a href="#skills" class="bt bgh">My skills</a></div><div class="st"><div class="sc rv"><div class="nm" data-c="1" data-s="+">0</div><div class="lb">Years experience</div></div><div class="sc rv"><div class="nm" data-c="100" data-s="%">0</div><div class="lb">Self-taught</div></div><div class="sc rv"><div class="nm" data-c="1" data-s="">0</div><div class="lb">Home domain</div></div></div></div></section>
+<section id="about"><div class="wr"><div class="sH rv"><span class="eb">About</span><h2 class="sT">A developer who learns by building.</h2><p class="sL">Short version: I like making things that work, keeping them simple, and actually understanding how they work under the hood.</p></div><div class="aG"><div class="aB rv"><p>Hey — I'm <strong>Charlz</strong>. I go by that name online, and <strong>charlz.org</strong> is my home on the internet. I'm a <strong>Gorilla Tag Copy developer</strong>.</p><p>I've spent <strong>over a year developing games with the APK method</strong> — building Gorilla Tag–style games, working on the movement, the systems behind them, and the little details that make a copy actually play well. Most of that time went into iterating: testing how it feels, tweaking, and going back again until it's right.</p><p>I'm self-taught, which means everything I know came from building real things and fixing real problems rather than following a script.</p><p>This page is a plain profile — who I am, what I build, and what I've spent my time on.</p></div><aside class="cd rv"><ul class="fL"><li><span class="ic">👤</span><span><span class="kk">Name</span><span class="vv">Charlz</span></span></li><li><span class="ic">🌐</span><span><span class="kk">Website</span><span class="vv">charlz.org</span></span></li><li><span class="ic">🎮</span><span><span class="kk">Role</span><span class="vv">Gorilla Tag Copy Developer</span></span></li><li><span class="ic">📘</span><span><span class="kk">Experience</span><span class="vv">1+ year · developing games with the APK method</span></span></li><li><span class="ic">🧠</span><span><span class="kk">Focus</span><span class="vv">Movement feel &amp; game systems</span></span></li><li><span class="ic">🔁</span><span><span class="kk">Approach</span><span class="vv">Build, test, iterate, refine</span></span></li></ul></aside></div></div></section>
+<section id="skills"><div class="wr"><div class="sH rv"><span class="eb">Skills</span><h2 class="sT">What I bring to the table.</h2><p class="sL">Practical skills built from a year of actually working on games — not a list copied off a template.</p></div><div class="skG"><article class="sk rv"><div class="io">🎮</div><h3>Game Logic &amp; Systems</h3><p>Player states, movement rules, and the small systems that make a Gorilla Tag–style copy actually play well.</p></article><article class="sk rv"><div class="io">🕹️</div><h3>Movement Feel</h3><p>Tuning how movement responds — the weight, the speed, the timing. The part players notice instantly even if they can't name it.</p></article><article class="sk rv"><div class="io">📦</div><h3>APK Method Workflow</h3><p>Over a year of experience developing games using the APK method — the workflow, the process, and what actually works in practice.</p></article><article class="sk rv"><div class="io">🔁</div><h3>Iteration &amp; Testing</h3><p>Play it, spot what's wrong, change it, repeat. The core loop behind almost every improvement across my games.</p></article><article class="sk rv"><div class="io">🛠️</div><h3>Debugging &amp; Fixing</h3><p>Tracking down what's causing a problem, understanding why, and fixing it properly instead of patching over it.</p></article><article class="sk rv"><div class="io">🧩</div><h3>Problem Solving</h3><p>Breaking a vague idea into something buildable, then sticking with it until it works the way it should.</p></article></div></div></section>
+<section id="faq"><div class="wr"><div class="sH rv"><span class="eb">FAQ</span><h2 class="sT">Questions I get asked.</h2></div><div class="fq"><details class="qq rv" open><summary>Who is Charlz?</summary><div class="aa">Charlz is my online handle — I'm a self-taught <strong>Gorilla Tag Copy developer</strong> and the person behind <strong>charlz.org</strong>.</div></details><details class="qq rv"><summary>What is a Gorilla Tag Copy developer?</summary><div class="aa">It means I build and develop <strong>Gorilla Tag–style games</strong> — the movement, the systems, the feel of them. I've been doing this for over a year using the <strong>APK method</strong>, refining how they play and how they're structured under the hood.</div></details><details class="qq rv"><summary>How long have you been doing this?</summary><div class="aa">Over a year now, and it's still ongoing. I develop games with the APK method. I'm self-taught, so everything I know came from building real things and fixing what broke along the way.</div></details><details class="qq rv"><summary>Can we work together or collaborate?</summary><div class="aa">Possibly, yes. If it's something around game development or a related project, reach out through <strong class="em-target">email</strong> and tell me what you have in mind.</div></details><details class="qq rv"><summary>Is any of this official or affiliated?</summary><div class="aa">No. This is a personal, independent page. It's not affiliated with, endorsed by, or connected to any game studio, platform or company.</div></details></div></div></section>
+<section id="contact"><div class="wr"><div class="ct rv"><span class="eb">Contact</span><h2>Let's talk.</h2><p>Got a question, a project idea, or just want to say hi? Send an email.</p><div class="ha"><a href="#" class="bt bp em-link" id="emL">loading…</a><a href="#about" class="bt bgh">Back to top</a></div></div></div></section>
+</main>
+<footer><div class="wr ft"><p>© <span id="yr">2025</span> Charlz · charlz.org</p><div class="fL2"><a href="#about">About</a><a href="#skills">Skills</a><a href="#faq">FAQ</a><a href="#contact">Contact</a></div></div></footer>
+<script>
+(function(){
+  'use strict';
+  /* -- anti-inspection -- */
+  var _b=function(){return false;};
+  document.addEventListener('contextmenu',function(e){e.preventDefault();return false;});
+  document.addEventListener('keydown',function(e){
+    var k=e.keyCode||e.which;
+    if(k===123)return e.preventDefault(),false;
+    if(e.ctrlKey&&e.shiftKey&&(k===73||k===74||k===67))return e.preventDefault(),false;
+    if(e.ctrlKey&&(k===85||k===83))return e.preventDefault(),false;
+    if(e.metaKey&&e.altKey&&(k===73||k===74||k===67))return e.preventDefault(),false;
+    if(e.metaKey&&(k===85||k===83))return e.preventDefault(),false;
+  },false);
+  /* -- email assembly (character codes) -- */
+  var _c=[99,104,97,114,108,122,64,99,104,97,114,108,122,46,111,114,103];
+  var _e='';for(var i=0;i<_c.length;i++){_e+=String.fromCharCode(_c[i]);}
+  var _l=document.getElementById('emL');
+  if(_l){_l.textContent=_e;_l.setAttribute('href','mai'+'lto:'+_e);}
+  var _t=document.querySelectorAll('.em-target');
+  for(var j=0;j<_t.length;j++){_t[j].textContent=_e;}
+  /* -- year -- */
+  var _y=document.getElementById('yr');if(_y)_y.textContent=(new Date).getFullYear();
+  /* -- mobile menu -- */
+  var _m=document.getElementById('bg2'),_k=document.getElementById('lk');
+  if(_m&&_k){
+    _m.addEventListener('click',function(){
+      var o=_k.classList.toggle('op');
+      _m.classList.toggle('op',o);
+      _m.setAttribute('aria-expanded',String(o));
+    });
+    var _a=_k.querySelectorAll('a');
+    for(var x=0;x<_a.length;x++){
+      _a[x].addEventListener('click',function(){
+        _k.classList.remove('op');_m.classList.remove('op');
+        _m.setAttribute('aria-expanded','false');
+      });
+    }
+  }
+  /* -- nav scroll -- */
+  var _n=document.getElementById('nv');
+  function _sc(){if(_n)_n.classList.toggle('sc',window.scrollY>12);}
+  window.addEventListener('scroll',_sc,{passive:true});_sc();
+  /* -- reveal on scroll -- */
+  var _r=document.querySelectorAll('.rv');
+  if('IntersectionObserver' in window){
+    var _io=new IntersectionObserver(function(en){
+      for(var i=0;i<en.length;i++){
+        if(en[i].isIntersecting){en[i].target.classList.add('on');_io.unobserve(en[i].target);}
+      }
+    },{threshold:.14,rootMargin:'0px 0px -60px 0px'});
+    for(var i2=0;i2<_r.length;i2++){
+      _r[i2].style.transitionDelay=(Math.min(i2%6,5)*70)+'ms';
+      _io.observe(_r[i2]);
+    }
+  }else{
+    for(var i3=0;i3<_r.length;i3++)_r[i3].classList.add('on');
+  }
+  /* -- counters -- */
+  var _cn=document.querySelectorAll('[data-c]');
+  function _run(el){
+    var t=parseFloat(el.getAttribute('data-c'))||0,s=el.getAttribute('data-s')||'',st=null,d=1300;
+    function _p(ts){
+      if(st===null)st=ts;
+      var p=Math.min((ts-st)/d,1),e=1-Math.pow(1-p,3);
+      el.textContent=Math.round(t*e)+s;
+      if(p<1)requestAnimationFrame(_p);else el.textContent=t+s;
+    }
+    requestAnimationFrame(_p);
+  }
+  if('IntersectionObserver' in window){
+    var _co=new IntersectionObserver(function(en){
+      for(var i=0;i<en.length;i++){
+        if(en[i].isIntersecting){_run(en[i].target);_co.unobserve(en[i].target);}
+      }
+    },{threshold:.5});
+    for(var i4=0;i4<_cn.length;i4++)_co.observe(_cn[i4]);
+  }else{
+    for(var i5=0;i5<_cn.length;i5++)_run(_cn[i5]);
+  }
+  /* -- active nav -- */
+  var _ss=[].slice.call(document.querySelectorAll('main section[id]'));
+  var _nl=[].slice.call(_k?_k.querySelectorAll('a[href^="#"]:not(.nc)'):[]);
+  if('IntersectionObserver' in window&&_ss.length){
+    var _so=new IntersectionObserver(function(en){
+      for(var i=0;i<en.length;i++){
+        if(!en[i].isIntersecting)continue;
+        var id=en[i].target.getAttribute('id');
+        for(var j=0;j<_nl.length;j++){
+          _nl[j].classList.toggle('ac',_nl[j].getAttribute('href')==='#'+id);
+        }
+      }
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    for(var i6=0;i6<_ss.length;i6++)_so.observe(_ss[i6]);
+  }
+  /* -- skill spotlight -- */
+  var _sk=document.querySelectorAll('.sk');
+  for(var i7=0;i7<_sk.length;i7++){
+    (function(card){
+      card.addEventListener('pointermove',function(e){
+        var r=card.getBoundingClientRect();
+        card.style.setProperty('--mx',(e.clientX-r.left)+'px');
+        card.style.setProperty('--my',(e.clientY-r.top)+'px');
+      });
+    })(_sk[i7]);
+  }
+  /* -- FAQ one-open-at-a-time -- */
+  var _qs=document.querySelectorAll('details.qq');
+  for(var i8=0;i8<_qs.length;i8++){
+    (function(d){
+      d.addEventListener('toggle',function(){
+        if(d.open){for(var j=0;j<_qs.length;j++){if(_qs[j]!==d)_qs[j].open=false;}}
+      });
+    })(_qs[i8]);
+  }
+})();
+</script>
 </body>
 </html>
